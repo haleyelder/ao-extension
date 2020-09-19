@@ -1,0 +1,47 @@
+body {
+    width: 350px;
+    margin: 0;
+    font-family: arial, sans-serif;
+  }
+  .click-toggle {
+    height: 40px;
+    width:100%;
+    background-color: #003b5c;
+    color: white;    
+  }
+
+  .click-toggle p {
+    padding: 12px;
+  }
+ .verifyBlocks {
+   padding: 0 0 10px 10px;
+  }
+
+  #dkim-record {
+    padding: 15px 0 0 10px;
+    font-weight: 700;
+  }
+
+  .dkimToggle {
+    display:block !important;
+    height: 135px;
+   }
+
+   .cnameToggle {
+    display:block !important;
+    height: 90px;
+   }
+
+   .mailingToggle {
+    display:block !important;
+    height: 115px;
+   }
+
+   .sslToggle {
+    display:block !important;
+    height: 105px;
+   }
+
+   .record-choice {
+     margin-bottom: 10px;
+   }

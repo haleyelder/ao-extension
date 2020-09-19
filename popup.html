@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>AO Extension</title>
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+
+  <div id ="dkimClickToggle" class="click-toggle">
+    <p>&#8853; DKIM</p>
+  </div>
+  
+  <!-- DKIM Verify -->
+    <div class="dkimVerification verifyBlocks" id="dkimVerification" style="display: none">
+      <h3>DKIM Check</h3>
+      <p>account ID: <input id="accountId" name="account id" placeholder="account id" type="text"></p>
+      <p>domain: <input id="domain" name="domain" placeholder="domain" type="text"></p><input id='dkimSubmit' type="submit" value="Generate"> <input id='dkimVerify' type="submit" value="Verify CNAME"> <input type="button" value="Reset form" id="dkimReset">
+  
+    <br>
+	  <div id="dkim-record"></div>
+  </div>
+ 
+  
+  <div id="cnameClickToggle" class="click-toggle">
+        <p>&#8853; Marketing Subdomain</p>
+      </div>
+      
+    <!-- MARKETING VERIFY -->
+    <div class="cnameVerification verifyBlocks" id="cnameVerification" style="display: none">
+      <h3>Marketing CNAME</h3>
+      <p>marketing domain: <input id="marketingSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p><input id='subdomainSubmit' type="submit" value="Check It!"> <input type="button" value="Reset form" id="cnameReset">
+    </div>
+  
+  
+    <div id="sslClickToggle" class="click-toggle">
+      <p>&#8853; SSL Shopper Verify</p>
+    </div>
+    
+  <!-- SSL STUFFS-->
+  <div class="sslVerification verifyBlocks" id="sslVerification" style="display: none">
+    <h3>SSL Domain Verify</h3>
+    <p>Marketing Subdomain to Check: <input id="sslSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p>
+    
+    </br>
+    
+    <input id='sslSubmit' type="submit" value="Check It!"> 
+    <input type="button" value="Reset form" id="sslReset">
+
+  </div>
+
+  <!-- SPF STUFF -->
+  
+  <div id="spfClickToggle" class="click-toggle">
+        <p>&#8853; Mailing SPF</p>
+      </div>
+      
+    <!-- SPF STUFFS -->
+    <div class="spfVerification verifyBlocks" id="spfVerification" style="display: none" >
+      <h3>Mailing/Domain SPF</h3>
+      <p>Sending Domain: <input id="sendingDomain" name="domain" placeholder="main or mailing subdomain" type="text"></p>
+      
+      
+
+
+      <select class="record-choice" id="recordChoice">
+        <option>Choose One</option>
+        <option value="TXT">TXT</option>
+        <option value="SPF">SPF</option>
+        <option value="MX">MX</option>
+      </select>
+      </br>
+      
+      <input id='spfSubmit' type="submit" value="Check It!"> 
+      <input type="button" value="Reset form" id="spfReset">
+
+    </div>
+
+  
+
+  
+  <script src="popup.js"></script>
+</body>
+</html>
