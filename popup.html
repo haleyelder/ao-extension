@@ -5,89 +5,78 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
+
 <head>
-	<meta charset="utf-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>AO Extension</title>
-	<meta content="" name="description">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>AO Extension</title>
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
 
 
-  <div id ="dkimClickToggle" class="click-toggle">
-    <p>&#8853; DKIM</p>
-  </div>
-  
-  <!-- DKIM Verify -->
-    <div class="dkimVerification verifyBlocks" id="dkimVerification" style="display: none">
-      <h3>DKIM Check</h3>
-      <p>account ID: <input id="accountId" name="account id" placeholder="account id" type="text"></p>
-      <p>domain: <input id="domain" name="domain" placeholder="domain" type="text"></p><input id='dkimSubmit' type="submit" value="Generate"> <input id='dkimVerify' type="submit" value="Verify CNAME"> <input type="button" value="Reset form" id="dkimReset">
-  
-    <br>
-	  <div id="dkim-record"></div>
-  </div>
- 
-  
-  <div id="cnameClickToggle" class="click-toggle">
-        <p>&#8853; Marketing Subdomain</p>
+    <!-- DKIM VERIFY -->
+    <div>
+      <a data-toggle="collapse" href="#dkimCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; DKIM</a>    
+      <div class="collapse" id="dkimCollapse">
+            <p>Account ID: <input id="accountId" name="account id" placeholder="account id" type="text"></p>
+            <p>Domain: <input id="domain" name="domain" placeholder="domain" type="text"></p>
+                <input id='dkimSubmit' type="submit" value="Generate"> 
+                <input id='dkimVerify' type="submit" value="Verify CNAME"> 
+                <input type="button" value="Reset form" id="dkimReset">
+                <br>
+            <div id="dkim-record"></div>
       </div>
-      
-    <!-- MARKETING VERIFY -->
-    <div class="cnameVerification verifyBlocks" id="cnameVerification" style="display: none">
-      <h3>Marketing CNAME</h3>
-      <p>marketing domain: <input id="marketingSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p><input id='subdomainSubmit' type="submit" value="Check It!"> <input type="button" value="Reset form" id="cnameReset">
     </div>
-  
-  
-    <div id="sslClickToggle" class="click-toggle">
-      <p>&#8853; SSL Shopper Verify</p>
-    </div>
-    
-  <!-- SSL STUFFS-->
-  <div class="sslVerification verifyBlocks" id="sslVerification" style="display: none">
-    <h3>SSL Domain Verify</h3>
-    <p>Marketing Subdomain to Check: <input id="sslSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p>
-    
-    </br>
-    
-    <input id='sslSubmit' type="submit" value="Check It!"> 
-    <input type="button" value="Reset form" id="sslReset">
 
-  </div>
-
-  <!-- SPF STUFF -->
-  
-  <div id="spfClickToggle" class="click-toggle">
-        <p>&#8853; Mailing SPF</p>
+    <!-- CUSTOM DOMAIN VERIFY -->
+    <div>
+      <a data-toggle="collapse" href="#marketingDomain" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; Marketing Domain</a>
+      <div class="collapse" id="marketingDomain">
+            <p>marketing domain: <input id="marketingSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p><input id='subdomainSubmit' type="submit" value="Check It!"> <input type="button" value="Reset form" id="cnameReset">
       </div>
-      
-    <!-- SPF STUFFS -->
-    <div class="spfVerification verifyBlocks" id="spfVerification" style="display: none" >
-      <h3>Mailing/Domain SPF</h3>
-      <p>Sending Domain: <input id="sendingDomain" name="domain" placeholder="main or mailing subdomain" type="text"></p>
-      
-      
-
-
-      <select class="record-choice" id="recordChoice">
-        <option>Choose One</option>
-        <option value="TXT">TXT</option>
-        <option value="SPF">SPF</option>
-        <option value="MX">MX</option>
-      </select>
-      </br>
-      
-      <input id='spfSubmit' type="submit" value="Check It!"> 
-      <input type="button" value="Reset form" id="spfReset">
-
     </div>
 
-  
+    <!-- SSL SHOPPER -->
+    <div>
+        <a data-toggle="collapse" href="#sslVerify" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; SSL Shopper Verify</a>
+        <div class="collapse" id="sslVerify">
+            <h3>SSL Domain Verify</h3>
+            <p>Marketing Subdomain to Check: <input id="sslSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p>
+            </br>
+            <input id='sslSubmit' type="submit" value="Check It!">
+            <input type="button" value="Reset form" id="sslReset">
+        </div>
+      </div>
 
-  
-  <script src="popup.js"></script>
+       <!-- EMAIL VERIFY -->
+      <div>
+        <a data-toggle="collapse" href="#emailVerify" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; Mailing Verify</a>
+        <div class="collapse" id="emailVerify">
+            <h3>Mailing/Domain SPF</h3>
+            <p>Sending Domain: <input id="sendingDomain" name="domain" placeholder="main or mailing subdomain" type="text"></p>
+            <select class="record-choice" id="recordChoice">
+                <option>Choose One</option>
+                    <option value="TXT">TXT</option>
+                    <option value="SPF">SPF</option>
+                    <option value="MX">MX</option>
+           </select>
+            </br>
+            <input id='spfSubmit' type="submit" value="Check It!">
+            <input type="button" value="Reset form" id="spfReset">
+        </div>
+      </div>
+
+    <script src="popup.js"></script>
 </body>
+
 </html>

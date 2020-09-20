@@ -1,4 +1,4 @@
-##AO Chrome Extension Refactor 
+## AO Chrome Extension Refactor 
 
 v1 - "make it work, then make it pretty" 
 - DKIM generate and verification with MX Toolbox
@@ -6,4 +6,4 @@ v1 - "make it work, then make it pretty"
 - SSL domain verification with SSL Shopper
 - txt/spf/mx verify with MX Toolbox based on dropdown options
 
-v2 - "code refactoring"
+v2 - code refactoring/tidying

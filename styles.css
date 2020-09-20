@@ -1,26 +1,54 @@
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  display: block;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+
+
 body {
     width: 350px;
     margin: 0;
     font-family: arial, sans-serif;
   }
-  .click-toggle {
+  .module-title {
     height: 40px;
     width:100%;
     background-color: #003b5c;
     color: white;    
   }
 
-  .click-toggle p {
-    padding: 12px;
-  }
- .verifyBlocks {
-   padding: 0 0 10px 10px;
-  }
 
   #dkim-record {
     padding: 15px 0 0 10px;
     font-weight: 700;
   }
+
+  .record-choice {
+    margin-bottom: 10px;
+  }
+
+a {
+  color: darkgray;
+}
+
+
+  /* NEW TOGGLE 
+#toggle {
+    display: none;
+  }
+  
+#toggle:target {
+    display: block;
+  }
+*/
+
+
+
+  /* TO REMOVE */
 
   .dkimToggle {
     display:block !important;
@@ -42,6 +70,3 @@ body {
     height: 105px;
    }
 
-   .record-choice {
-     margin-bottom: 10px;
-   }
