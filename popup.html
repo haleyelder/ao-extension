@@ -22,11 +22,9 @@
 </head>
 
 <body>
-
-
     <!-- DKIM VERIFY -->
-    <div>
-      <a data-toggle="collapse" href="#dkimCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; DKIM</a>    
+    <div class="verify-module">
+        <a data-toggle="collapse" href="#dkimCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; DKIM</a>
       <div class="collapse" id="dkimCollapse">
             <p>Account ID: <input id="accountId" name="account id" placeholder="account id" type="text"></p>
             <p>Domain: <input id="domain" name="domain" placeholder="domain" type="text"></p>
@@ -38,16 +36,18 @@
       </div>
     </div>
 
+    <br>
     <!-- CUSTOM DOMAIN VERIFY -->
-    <div>
+    <div class="verify-module">
       <a data-toggle="collapse" href="#marketingDomain" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; Marketing Domain</a>
       <div class="collapse" id="marketingDomain">
             <p>marketing domain: <input id="marketingSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p><input id='subdomainSubmit' type="submit" value="Check It!"> <input type="button" value="Reset form" id="cnameReset">
       </div>
     </div>
+    <br>
 
     <!-- SSL SHOPPER -->
-    <div>
+    <div class="verify-module">
         <a data-toggle="collapse" href="#sslVerify" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; SSL Shopper Verify</a>
         <div class="collapse" id="sslVerify">
             <h3>SSL Domain Verify</h3>
@@ -58,8 +58,10 @@
         </div>
       </div>
 
+      <br>
+
        <!-- EMAIL VERIFY -->
-      <div>
+      <div class="verify-module">
         <a data-toggle="collapse" href="#emailVerify" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; Mailing Verify</a>
         <div class="collapse" id="emailVerify">
             <h3>Mailing/Domain SPF</h3>

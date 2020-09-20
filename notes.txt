@@ -4,4 +4,4 @@
 - marketing subdomain: links, content, assets, for SSL
 - SSL: when will it expire, who's the provider, etc
 - mailing spf (needs new name): spf/txt/mx records for sending verification (email and envelope from)
-    - mail records 
+    - mail records
