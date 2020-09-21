@@ -1,4 +1,4 @@
-/* DKIM MODULE VERIFICATION AND CLEARING */ 
+/* DKIM MODULE VERIFICATION */ 
 
 //click to process function, create dkim key
 document.getElementById("dkimSubmit").addEventListener("click", function(){
@@ -14,12 +14,6 @@ document.getElementById("dkimVerify").addEventListener("click", function(){
     window.open('https://mxtoolbox.com/SuperTool.aspx?action=cname%3a'+dkimVerifyOutput+'&run=toolpage', '_blank');
 }, false);
 
-//clear dkim
-document.getElementById("dkimReset").addEventListener("click", function(){
-    document.getElementById("accountId").value = "";
-    document.getElementById("domain").value = "";
-});
-
 /* MARKETING SUBDOMAIN */
 
 // check marketing subdomain, opens mxtoolbox
@@ -28,32 +22,13 @@ document.getElementById("subdomainSubmit").addEventListener("click", function(){
     window.open('https://mxtoolbox.com/SuperTool.aspx?action=cname%3a'+subdomainOutput+'&run=toolpage', '_blank');
 }, false);
 
-
-//clear cname
-document.getElementById("cnameReset").addEventListener("click", function(){
-    document.getElementById("marketingSubdomain").value = "";
-});
-
 /* SSL VERIFY */
-
-
 document.getElementById("sslSubmit").addEventListener("click", function(){
     var sslOutput = document.getElementById("sslSubdomain").value;
     window.open('https://www.sslshopper.com/ssl-checker.html?hostname='+sslOutput+'','_blank');
 }, false);
 
-
-//clear ssl
-document.getElementById("sslReset").addEventListener("click", function(){
-    document.getElementById("sslSubdomain").value = "";
-});
-
 /* MAILNIG RECORDS VERIFY */
-
-//clear spf
-document.getElementById("spfReset").addEventListener("click", function(){
-    document.getElementById("sendingDomain").value = "";
-});
 
 // mx/spf/txt dropdown choice assigned
 document.addEventListener("DOMContentLoaded", function() {

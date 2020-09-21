@@ -1,3 +1,6 @@
+NOTES:
+>> for portfolio write up thing; background info
+
 - tech reqs [https://connect.act-on.com/hc/en-us/articles/360023759574-Required-Technical-Setup-Overview]
 
 - DKIM: domain keys something; for email sending

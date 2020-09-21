@@ -7,3 +7,5 @@ v1 - "make it work, then make it pretty"
 - txt/spf/mx verify with MX Toolbox based on dropdown options
 
 v2 - code refactoring/tidying
+- remove 'reset' button functions
+- added bootstrap for toggle

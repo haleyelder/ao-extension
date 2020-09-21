@@ -1,8 +1,9 @@
 body {
-    width: 350px;
+    width: 305px;
     margin: 0;
     font-family: arial, sans-serif;
   }
+  
   #dkim-record {
     padding: 15px 0 0 10px;
     font-weight: 700;
@@ -14,6 +15,23 @@ body {
 
   .verify-module a {
     color: white;
-    font-weight: 800;
-    background-color: navy;
+    font-weight: 700;
+    padding: 5px 0;
   }
+
+  .verify-module {
+    margin: 0 0 4px 0;
+  }
+
+div.title {
+  padding: 10px;
+  background-color: #00468b;
+}
+
+.collapse {
+  padding: 10px 0 5px 8px
+}
+
+a:hover {
+  text-decoration: none;
+}
