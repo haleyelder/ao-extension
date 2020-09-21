@@ -2,11 +2,13 @@
     "manifest_version": 2,
     "name": "AO TechReq Verification Extension",
     "description": "Chrome browser extension created to to generate and verify DNS records with an MX Toolbox shortcut primarily for technical requirements initial verification",
-    "version": "1.7",
+    "version": "1.8",
     "browser_action": {
      "default_popup": "popup.html"
     },
+    "content_security_policy":"script-src 'self' https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css https://code.jquery.com/jquery-3.5.1.js https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js; object-src 'self'",
     "permissions": [
      "activeTab"
      ]
   }
+
