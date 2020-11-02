@@ -22,11 +22,9 @@
     <!-- DKIM VERIFY -->
     <div class="verify-module">
         <div class="title">
-            <a data-toggle="collapse" href="#dkimCollapse" role="button" aria-expanded="false"
-                aria-controls="collapseExample">&#8853; DKIM</a>
+            <a data-toggle="collapse" href="#dkimCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; DKIM</a>
         </div>
-        <div class="collapse" id="dkimCollapse">
-
+        <div class="collapse panel" id="dkimCollapse">
             <p>Account ID: <input id="accountId" name="account id" placeholder="account id" type="text"></p>
             <p>Domain: <input id="domain" name="domain" placeholder="domain" type="text"></p>
             <input id='dkimSubmit' type="submit" value="Generate">
@@ -39,38 +37,31 @@
     <!-- CUSTOM DOMAIN VERIFY -->
     <div class="verify-module">
         <div class="title">
-            <a data-toggle="collapse" href="#marketingDomain" role="button" aria-expanded="false"
-                aria-controls="collapseExample">&#8853; Marketing Domain</a>
+            <a data-toggle="collapse" href="#marketingDomain" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; Marketing Domain</a>
         </div>
-        <div class="collapse" id="marketingDomain">
-            <p>Marketing Subdomain: <input id="marketingSubdomain" name="domain" placeholder="marketing subdomain"
-                    type="text"></p><input id='subdomainSubmit' type="submit" value="Check It!">
+        <div class="collapse panel" id="marketingDomain">
+            <p>Marketing Subdomain: <input id="marketingSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p><input id='subdomainSubmit' type="submit" value="Verify Subdomain">
         </div>
     </div>
 
     <!-- SSL SHOPPER -->
     <div class="verify-module">
         <div class="title">
-            <a data-toggle="collapse" href="#sslVerify" role="button" aria-expanded="false"
-                aria-controls="collapseExample">&#8853; SSL Shopper Verify</a>
+            <a data-toggle="collapse" href="#sslVerify" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; SSL Shopper Verify</a>
         </div>
-        <div class="collapse" id="sslVerify">
-
-            <p>Marketing Subdomain: <input id="sslSubdomain" name="domain" placeholder="marketing subdomain"
-                    type="text"></p>
-            <input id='sslSubmit' type="submit" value="Check It!">
+        <div class="collapse panel" id="sslVerify">
+            <p>Marketing Subdomain: <input id="sslSubdomain" name="domain" placeholder="marketing subdomain" type="text"></p>
+            <input id='sslSubmit' type="submit" value="Verify SSL">
         </div>
     </div>
 
     <!-- EMAIL VERIFY -->
     <div class="verify-module">
         <div class="title">
-            <a data-toggle="collapse" href="#emailVerify" role="button" aria-expanded="false"
-                aria-controls="collapseExample">&#8853; Mailing Verify</a>
+            <a data-toggle="collapse" href="#emailVerify" role="button" aria-expanded="false" aria-controls="collapseExample">&#8853; Mailing Verify</a>
         </div>
-        <div class="collapse" id="emailVerify">
-            <p>Sending Domain: <input id="sendingDomain" name="domain" placeholder="main or mailing subdomain"
-                    type="text"></p>
+        <div class="collapse panel" id="emailVerify">
+            <p>Sending Domain: <input id="sendingDomain" name="domain" placeholder="main or mailing subdomain" type="text"></p>
             <select class="record-choice" id="recordChoice">
                 <option>Choose One</option>
                 <option value="TXT">TXT</option>
@@ -78,7 +69,7 @@
                 <option value="MX">MX</option>
             </select>
             </br>
-            <input id='spfSubmit' type="submit" value="Check It!">
+            <input id='spfSubmit' type="submit" value="Verify Mail Records">
         </div>
     </div>
 
